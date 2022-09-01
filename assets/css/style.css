@@ -427,6 +427,10 @@ pre code { font-size: 15px !important; }
 
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
+.page-content { font-family: "Georgia", "Liberation Serif", "Noto Serif", serif !important; }
+
+body { background-color: #dde3e3; color: #201e1f; }
+
 .language-python + .language-plaintext { border-left: 1px solid grey; margin-left: 1rem !important; }
 
 [class^="language-"]:not(.language-plaintext) pre, [class^="language-"]:not(.language-plaintext) code { background-color: #323443 !important; color: #f8f8f2; }
