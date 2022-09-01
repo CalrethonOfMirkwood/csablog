@@ -6,6 +6,16 @@
 
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
+$primary-color: #dde3e3;
+$text-color: #201e1f;
 
+.page-content {
+    font-family: "Perpetua", "Liberation Serif", "Noto Serif", serif !important;
+}
+
+body {
+    background-color: $primary-color;
+    color: $text-color;
+  }
 // If you want to turn off dark background for syntax highlighting, comment or delete the below line.
 @import "minima/fastpages-dracula-highlight"; 
