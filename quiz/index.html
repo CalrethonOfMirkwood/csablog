@@ -71,16 +71,18 @@ window.onload = wrap_img;
       <div class="wrapper">
         <h2>Take this amazing personality quiz to determine which kpop idol you are most compatible with.</h2>
 
+<br>
+
 <script>
 var questionArray = [
-  ["Q1. Is the glass half empty or half full?", "Half empty  ", "Half full  ", "Reality is not objective  "], 
-  ["Q2. Which primary color is your favorite?", "Red  ", "Green  ", "Blue  "], 
-  ["Q3. ???", "What?  ", "What??  ", "???  "]
+  ["Q1. Is the glass half empty or half full?", "Half empty", "Half full", "Reality is not objective"], 
+  ["Q2. Which primary color is your favorite?", "Red", "Green", "Blue"], 
+  ["Q3. ???", "What?", "What??", "???"]
 ];
 
 //populate document
 for (var i = 0; i < questionArray.length; i++){
-  document.write("<form><span class='question'>" + questionArray[i][0] + "</span><br>");
+  document.write("<form><span class='question'>" + questionArray[i][0] + "  </span><br>");
   for (var x = 1; x < 4; x++){
     document.write("<input type='radio' class='answer' name='answer' value='" + questionArray[i][x] + "'>" + questionArray[i][x] + "");
   }
