@@ -7,9 +7,9 @@ title: Kpop Compatibility Quiz
 
 <script>
 var questionArray = [
-  ["Is the glass half empty or half full?", "Half empty", "Half full", "Reality is not objective"], 
-  ["Which primary color is your favorite?", "Red", "Green", "Blue"], 
-  ["?", "What?", "What??", "???"]
+  ["Q1. Is the glass half empty or half full?", "Half empty  ", "Half full  ", "Reality is not objective  "], 
+  ["Q2. Which primary color is your favorite?", "Red  ", "Green  ", "Blue  "], 
+  ["Q3. ???", "What?  ", "What??  ", "???  "]
 ];
 
 //populate document
@@ -73,9 +73,10 @@ function answer(){
         t = characterAnswer[j][3];
         }
 } 
-  const tr = document.createElement("result");
-  result.appendChild("You are most compatible with "+t+"!")
-  
+  document.getElementById("text").innerText = "You are most compatible with " + t + "!";
 }
 </script>
 
+<br>
+
+<h2 id="text"></div>
