@@ -4,20 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Sophie Park CSA Blog | I blog about stuff.</title>
+<title>Kpop Compatibility Quiz | Sophie Park CSA Blog</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Sophie Park CSA Blog" />
+<meta property="og:title" content="Kpop Compatibility Quiz" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="I blog about stuff." />
 <meta property="og:description" content="I blog about stuff." />
-<link rel="canonical" href="https://calrethonofmirkwood.github.io/csablog/404.html" />
-<meta property="og:url" content="https://calrethonofmirkwood.github.io/csablog/404.html" />
+<link rel="canonical" href="https://calrethonofmirkwood.github.io/csablog/quiz/" />
+<meta property="og:url" content="https://calrethonofmirkwood.github.io/csablog/quiz/" />
 <meta property="og:site_name" content="Sophie Park CSA Blog" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Sophie Park CSA Blog" />
+<meta property="twitter:title" content="Kpop Compatibility Quiz" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"I blog about stuff.","headline":"Sophie Park CSA Blog","url":"https://calrethonofmirkwood.github.io/csablog/404.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"I blog about stuff.","headline":"Kpop Compatibility Quiz","url":"https://calrethonofmirkwood.github.io/csablog/quiz/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/csablog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://calrethonofmirkwood.github.io/csablog/feed.xml" title="Sophie Park CSA Blog" /><link rel="shortcut icon" type="image/x-icon" href="/csablog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -69,25 +69,82 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+        <h2>Take this amazing personality quiz to determine which kpop idol you are most compatible with.</h2>
 
-<div class="container">
-  <h1>404</h1>
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+<script>
+var questionArray = [
+  ["Is the glass half empty or half full?", "Half empty", "Half full", "Reality is not objective"], 
+  ["Which primary color is your favorite?", "Red", "Green", "Blue"], 
+  ["?", "What?", "What??", "???"]
+];
+
+//populate document
+for (var i = 0; i < questionArray.length; i++){
+  document.write("<form><span class='question'>" + questionArray[i][0] + "</span><br>");
+  for (var x = 1; x < 4; x++){
+    document.write("<input type='radio' class='answer' name='answer' value='" + questionArray[i][x] + "'>" + questionArray[i][x] + "");
+  }
+  document.write("</form><br>");
+}
+
+var characterAnswer = [
+  [0, 0, 0,'Jungkook'],
+  [0, 0, 1,'Yungkuuk'],
+  [1, 1, 1,'Juncok'],
+  [1, 1, 2,'*insert another variation of "Jungkook"*'],
+  [2, 2, 2,'idk']
+];
+
+//check for click
+var inputs = document.getElementsByTagName('input');
+for(var i = 0; i < inputs.length; i++){
+  inputs[i].addEventListener('click', check);
+}
+
+var userAnswers = [];
+
+//check questions answers
+function check(){
+  userAnswers = [];
+  var c = 0;
+  for(var i = 0; i < inputs.length; i++){
+    if(inputs[i].checked) {
+      userAnswers.push(i%3);
+      c++;
+    }
+  }
+  if(c==questionArray.length) rate();
+}
+
+//rate the answers per char
+function rate(){
+  console.log(userAnswers);
+  for(var i = 0; i < userAnswers.length; i++){
+    for(var j = 0; j < characterAnswer.length; j++){
+      characterAnswer[j][4] = 0;
+      for(var x = 0; x < 4; x++){
+        if(userAnswers[i] == characterAnswer[j][x])
+          characterAnswer[j][4]++;
+      }
+    }
+  }
+  answer();
+}
+
+function answer(){
+  var a = 0, t;
+  for(var j = 0; j < characterAnswer.length; j++){
+        if(characterAnswer[j][4] > a) {
+        a = characterAnswer[j][4];
+        t = characterAnswer[j][3];
+        }
+} 
+  const tr = document.createElement("result");
+  result.appendChild("You are most compatible with "+t+"!")
+  
+}
+</script>
+
 
       </div>
     </main><footer class="site-footer h-card">
