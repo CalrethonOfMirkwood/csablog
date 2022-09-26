@@ -118,22 +118,28 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">fibbonacci</span><span class="p">{</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">fibbonacci</span><span class="p">{</span>
     <span class="kt">int</span> <span class="n">n1</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">n2</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">n3</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">Scanner</span> <span class="n">sus</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]</span><span class="p">)</span> <span class="p">{</span>           
-    
-    <span class="n">For</span><span class="p">();</span>
-    <span class="n">While</span><span class="p">();</span>
-    <span class="n">Recursive</span><span class="p">();</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Enter integer: "</span><span class="p">);</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="n">sus</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+
+        <span class="n">For</span><span class="p">();</span>
+        <span class="n">While</span><span class="p">();</span>
+        <span class="n">Recursive</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
     <span class="p">}</span>    
 
     <span class="kd">static</span> <span class="kt">void</span> <span class="nf">For</span><span class="p">(){</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">n1</span><span class="o">+</span><span class="s">" "</span><span class="o">+</span><span class="n">n2</span><span class="p">);</span><span class="c1">//printing 0 and 1 </span>
-        <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span><span class="c1">//loop starts from 2 because 0 and 1 are already printed    </span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">num</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span><span class="c1">//loop starts from 2 because 0 and 1 are already printed    </span>
             <span class="n">n3</span><span class="o">=</span><span class="n">n1</span><span class="o">+</span><span class="n">n2</span><span class="p">;</span>    
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">" "</span><span class="o">+</span><span class="n">n3</span><span class="p">);</span>    
             <span class="n">n1</span><span class="o">=</span><span class="n">n2</span><span class="p">;</span>    
@@ -143,7 +149,7 @@ window.onload = wrap_img;
 
     <span class="kd">static</span> <span class="kt">void</span> <span class="nf">While</span><span class="p">(){</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">n1</span><span class="o">+</span><span class="s">" "</span><span class="o">+</span><span class="n">n2</span><span class="p">);</span><span class="c1">//printing 0 and 1</span>
-        <span class="n">whlie</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">whlie</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">num</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">n3</span><span class="o">=</span><span class="n">n1</span><span class="o">+</span><span class="n">n2</span><span class="p">;</span>    
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">" "</span><span class="o">+</span><span class="n">n3</span><span class="p">);</span>    
             <span class="n">n1</span><span class="o">=</span><span class="n">n2</span><span class="p">;</span>    
@@ -151,7 +157,7 @@ window.onload = wrap_img;
         <span class="p">}</span>
     <span class="p">}</span>
 
-    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">Recursive</span><span class="p">(){</span>
+    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">Recursive</span><span class="p">(</span><span class="n">n</span><span class="p">){</span>
         <span class="k">if</span> <span class="p">((</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">))</span>
             <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
         <span class="k">else</span>
@@ -171,13 +177,17 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <blockquote>
-<p>Skill 1.B:Determine code that would be used to complete code segments (ie For, While, Recursion)
-I have made the functions.
-Skill 4.C:Determine if two or more code segments yield equivalent results (be sure to Discuss how you know results are the same)
-They all yield the same results because 1. the for and while loops contain the same code, just rerun under different mechanisms, and 2. all of the functions are solving the same fibbonacci sequence.
-Skill 5.A:Describe the behavior of a given segment of program code (describe the difference in recursion versus for &amp; while loops, perhaps add timing to determine speed)
-The for and whlie loops run the same sequence to calculate the next number but the recursive function uses previous results.  Therefore the recursive funciton is more efficient and has a faster runtime than the for and while loops</p>
+<p>Skill 1.B:Determine code that would be used to complete code segments (ie For, While, Recursion)</p>
 </blockquote>
+<p>I have made the functions.</p>
+<blockquote>
+<p>Skill 4.C:Determine if two or more code segments yield equivalent results (be sure to Discuss how you know results are the same)</p>
+</blockquote>
+<p>They all yield the same results because 1. the for and while loops contain the same code, just rerun under different mechanisms, and 2. all of the functions are solving the same fibbonacci sequence.</p>
+<blockquote>
+<p>Skill 5.A:Describe the behavior of a given segment of program code (describe the difference in recursion versus for &amp; while loops, perhaps add timing to determine speed)</p>
+</blockquote>
+<p>The for and whlie loops run the same sequence to calculate the next number but the recursive function uses previous results.  Therefore the recursive funciton is more efficient and has a faster runtime than the for and while loops</p>
 
 </div>
 </div>
