@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      3 min read
     
 </span></p>
 
@@ -132,42 +132,80 @@ window.onload = wrap_img;
 
         <span class="c1">// print current list</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Print current list"</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"List : "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"List : "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">);</span> 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The list currently has "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">+</span> <span class="s">" items"</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</span><span class="p">);</span>
 
-        <span class="c1">// Adding insongs to songs</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Add new item"</span><span class="p">);</span>
+        <span class="c1">// Add "Bob" to the end of list</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Add new item using add()"</span><span class="p">);</span>
         <span class="n">bts</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Bob"</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Added 'Bob' to list"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Added \"Bob\" to list"</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"List : "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The list currently has "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">+</span> <span class="s">" items"</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</span><span class="p">);</span>
-
-        <span class="c1">// remove element based on element content itself</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Remove 'Jungkook'"</span><span class="p">);</span>
-        <span class="n">bts</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="s">"Jungkook"</span><span class="p">);</span>
+        
+        <span class="c1">// Adding "Bob" at specified index</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Add new item at specific index using set()"</span><span class="p">);</span>
+        <span class="n">bts</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s">"Bob"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Set \"Bob\" to list at index 0"</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"List : "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The list currently has "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">+</span> <span class="s">" items"</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</span><span class="p">);</span>
 
         <span class="c1">// get specefic element then remove it</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"This is the element at index 2: "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s">". Let's remove it."</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Get specific element using get(), then remove it using remove()"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"This is the element at index 2: "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s">". Let's remove it."</span><span class="p">);</span>
         <span class="n">bts</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"List : "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The list currently has "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">+</span> <span class="s">" items"</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</span><span class="p">);</span>
-
+        
         <span class="c1">// Removing a specific element based on name</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Remove 'Jungkook'"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Remove \"Jungkook\" using remove()"</span><span class="p">);</span>
         <span class="n">bts</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="s">"Jungkook"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Removed \"Jungkook\""</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"List : "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The list currently has "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">+</span> <span class="s">" items"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</span><span class="p">);</span>
+
+        <span class="c1">// See if "Jungkook" exists using</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"See if \"Jungkook\" exists using contains()"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Output of bts.contains(\"Jungkook\") : "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">"Jungkook"</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"List : "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The list currently has "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">+</span> <span class="s">" items"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</span><span class="p">);</span>
+
+        <span class="c1">// Find first index of "Bob"</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Find first index of \"Bob\" using indexOf()"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Outpuf of bts.indexOf(\"Bob\") : "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">"Bob"</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"List : "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The list currently has "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">+</span> <span class="s">" items"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</span><span class="p">);</span>
+
+        <span class="c1">// Find last index of "Bob"</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Find last index of \"Jungkook\" using lastIndexOf()"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Outpuf of bts.lastIndexOf(\"Bob\") : "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">.</span><span class="na">lastIndexOf</span><span class="p">(</span><span class="s">"Bob"</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"List : "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The list currently has "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">+</span> <span class="s">" items"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</span><span class="p">);</span>
+
+        <span class="c1">// See if list is empty</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"See if the list is empty using the isEmpty()"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Output of bts.isEmpty() : "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">());</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"List : "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The list currently has "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">+</span> <span class="s">" items"</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</span><span class="p">);</span>
 
         <span class="c1">// Clearing the entire list</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Clearing the entire list using the clear() function."</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Clearing the entire list using the clear()"</span><span class="p">);</span>
         <span class="n">bts</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"List : "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The list currently has "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">+</span> <span class="s">" items"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</span><span class="p">);</span>
+
+        <span class="c1">// See if list is empty again</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"See if the list is empty using the isEmpty()"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Output of bts.isEmpty() : "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">());</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"List : "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The list currently has "</span> <span class="o">+</span> <span class="n">bts</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">+</span> <span class="s">" items"</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"</span><span class="p">);</span>
@@ -193,24 +231,52 @@ window.onload = wrap_img;
 List : [Jin, Suga, J-Hope, RM, Jimin, V, Jungkook]
 The list currently has 7 items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Add new item
-Added 'Bob' to list
+Add new item using add()
+Added "Bob" to list
 List : [Jin, Suga, J-Hope, RM, Jimin, V, Jungkook, Bob]
 The list currently has 8 items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Remove 'Jungkook'
-List : [Jin, Suga, J-Hope, RM, Jimin, V, Bob]
+Add new item at specific index using set()
+Set "Bob" to list at index 0
+List : [Bob, Suga, J-Hope, RM, Jimin, V, Jungkook, Bob]
+The list currently has 8 items
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Get specific element using get(), then remove it using remove()
+This is the element at index 2: Jimin. Let's remove it.
+List : [Bob, Suga, J-Hope, RM, V, Jungkook, Bob]
 The list currently has 7 items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-This is the element at index 2: J-Hope. Let's remove it.
-List : [Jin, Suga, J-Hope, RM, V, Bob]
+Remove "Jungkook" using remove()
+Removed "Jungkook"
+List : [Bob, Suga, J-Hope, RM, V, Bob]
 The list currently has 6 items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Remove 'Jungkook'
-List : [Jin, Suga, J-Hope, RM, V, Bob]
+See if "Jungkook" exists using contains()
+Output of bts.contains("Jungkook") : false
+List : [Bob, Suga, J-Hope, RM, V, Bob]
 The list currently has 6 items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Clearing the entire list using the clear() function.
+Find first index of "Bob" using indexOf()
+Outpuf of bts.indexOf("Bob") : 0
+List : [Bob, Suga, J-Hope, RM, V, Bob]
+The list currently has 6 items
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Find last index of "Jungkook" using lastIndexOf()
+Outpuf of bts.lastIndexOf("Bob") : 5
+List : [Bob, Suga, J-Hope, RM, V, Bob]
+The list currently has 6 items
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+See if the list is empty using the isEmpty()
+Output of bts.isEmpty() : false
+List : [Bob, Suga, J-Hope, RM, V, Bob]
+The list currently has 6 items
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Clearing the entire list using the clear()
+List : []
+The list currently has 0 items
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+See if the list is empty using the isEmpty()
+Output of bts.isEmpty() : true
 List : []
 The list currently has 0 items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
