@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://calrethonofmirkwood.github.io/csablog/jupyter/2011/10/19/iterationlesson.html</loc>
+<lastmod>2011-10-19T00:00:00-05:00</lastmod>
+</url>
+<url>
 <loc>https://calrethonofmirkwood.github.io/csablog/markdown/2020/01/14/test-markdown-post.html</loc>
 <lastmod>2020-01-14T00:00:00-06:00</lastmod>
 </url>
@@ -67,6 +71,10 @@
 <url>
 <loc>https://calrethonofmirkwood.github.io/csablog/jupyter/2022/10/18/objectslesson.html</loc>
 <lastmod>2022-10-18T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>https://calrethonofmirkwood.github.io/csablog/jupyter/2022/10/20/classeslesson.html</loc>
+<lastmod>2022-10-20T00:00:00-05:00</lastmod>
 </url>
 <url>
 <loc>https://calrethonofmirkwood.github.io/csablog/jupyter/2022/11/07/corrections.html</loc>
