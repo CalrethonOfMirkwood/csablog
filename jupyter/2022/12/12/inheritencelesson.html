@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Unit 9 - Inheritence Lesson | Sophie Park CSA Blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Unit 9 - Inheritence Lesson" />
+<meta name="author" content="Sophie" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I blog about stuff." />
+<meta property="og:description" content="I blog about stuff." />
+<link rel="canonical" href="https://calrethonofmirkwood.github.io/csablog/jupyter/2022/12/12/inheritencelesson.html" />
+<meta property="og:url" content="https://calrethonofmirkwood.github.io/csablog/jupyter/2022/12/12/inheritencelesson.html" />
+<meta property="og:site_name" content="Sophie Park CSA Blog" />
+<meta property="og:image" content="https://calrethonofmirkwood.github.io/csablog/images/chart-preview.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-12T00:00:00-06:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://calrethonofmirkwood.github.io/csablog/images/chart-preview.png" />
+<meta property="twitter:title" content="Unit 9 - Inheritence Lesson" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Sophie"},"dateModified":"2022-12-12T00:00:00-06:00","datePublished":"2022-12-12T00:00:00-06:00","description":"I blog about stuff.","headline":"Unit 9 - Inheritence Lesson","image":"https://calrethonofmirkwood.github.io/csablog/images/chart-preview.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://calrethonofmirkwood.github.io/csablog/jupyter/2022/12/12/inheritencelesson.html"},"url":"https://calrethonofmirkwood.github.io/csablog/jupyter/2022/12/12/inheritencelesson.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/csablog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://calrethonofmirkwood.github.io/csablog/feed.xml" title="Sophie Park CSA Blog" /><link rel="shortcut icon" type="image/x-icon" href="/csablog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/csablog/">Sophie Park CSA Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/csablog/about/">About Me</a><a class="page-link" href="/csablog/quiz/">Kpop Compatibility Quiz</a><a class="page-link" href="/csablog/search/">Search</a><a class="page-link" href="/csablog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Unit 9 - Inheritence Lesson</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-12-12T00:00:00-06:00" itemprop="datePublished">
+        Dec 12, 2022
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Sophie</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/csablog/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-12-12-inheritencelesson.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">teams</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">country</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="n">wtl</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">jerseycolor</span><span class="p">;</span>
+        
+    <span class="kd">public</span> <span class="nf">teams</span> <span class="p">(</span><span class="n">String</span> <span class="n">country</span><span class="p">,</span> <span class="kt">double</span> <span class="n">wtl</span><span class="p">,</span> <span class="n">String</span> <span class="n">jerseycolor</span><span class="p">){</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">country</span> <span class="o">=</span> <span class="n">country</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">wtl</span> <span class="o">=</span> <span class="n">wtl</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">jerseycolor</span> <span class="o">=</span> <span class="n">jerseycolor</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getCountry</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">country</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getWTL</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">wtl</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getJerseyColor</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="n">jerseycolor</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dictionopolis</span> <span class="kd">extends</span> <span class="n">teams</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Dictionopolis</span><span class="p">(</span><span class="n">String</span> <span class="n">country</span><span class="p">,</span> <span class="kt">double</span> <span class="n">wtl</span><span class="p">,</span> <span class="n">String</span> <span class="n">jerseycolor</span><span class="p">){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">country</span><span class="p">,</span> <span class="n">wtl</span><span class="p">,</span> <span class="n">jerseycolor</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Digitopolis</span> <span class="kd">extends</span> <span class="n">teams</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Digitopolis</span><span class="p">(</span><span class="n">String</span> <span class="n">country</span><span class="p">,</span> <span class="kt">double</span> <span class="n">wtl</span><span class="p">,</span> <span class="n">String</span> <span class="n">jerseycolor</span><span class="p">){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">country</span><span class="p">,</span> <span class="n">wtl</span><span class="p">,</span> <span class="n">jerseycolor</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Manchuria</span> <span class="kd">extends</span> <span class="n">teams</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Manchuria</span><span class="p">(</span><span class="n">String</span> <span class="n">country</span><span class="p">,</span> <span class="kt">double</span> <span class="n">wtl</span><span class="p">,</span> <span class="n">String</span> <span class="n">jerseycolor</span><span class="p">){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">country</span><span class="p">,</span> <span class="n">wtl</span><span class="p">,</span> <span class="n">jerseycolor</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">HRE</span> <span class="kd">extends</span> <span class="n">teams</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">HRE</span><span class="p">(</span><span class="n">String</span> <span class="n">country</span><span class="p">,</span> <span class="kt">double</span> <span class="n">wtl</span><span class="p">,</span> <span class="n">String</span> <span class="n">jerseycolor</span><span class="p">){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">country</span><span class="p">,</span> <span class="n">wtl</span><span class="p">,</span> <span class="n">jerseycolor</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Sealand</span> <span class="kd">extends</span> <span class="n">teams</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Sealand</span><span class="p">(</span><span class="n">String</span> <span class="n">country</span><span class="p">,</span> <span class="kt">double</span> <span class="n">wtl</span><span class="p">,</span> <span class="n">String</span> <span class="n">jerseycolor</span><span class="p">){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">country</span><span class="p">,</span> <span class="n">wtl</span><span class="p">,</span> <span class="n">jerseycolor</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="n">Dictionopolis</span> <span class="n">dcp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Dictionopolis</span><span class="p">(</span><span class="s">&quot;Dictionopolis&quot;</span><span class="p">,</span> <span class="mf">1.984</span><span class="p">,</span> <span class="s">&quot;Red&quot;</span><span class="p">);</span>
+<span class="n">Digitopolis</span> <span class="n">dgp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Digitopolis</span><span class="p">(</span><span class="s">&quot;Digitopolis&quot;</span><span class="p">,</span> <span class="mf">2.178</span><span class="p">,</span> <span class="s">&quot;Blue&quot;</span><span class="p">);</span>
+<span class="n">Manchuria</span> <span class="n">mch</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Manchuria</span><span class="p">(</span><span class="s">&quot;Manchuria&quot;</span><span class="p">,</span> <span class="mf">0.43</span><span class="p">,</span> <span class="s">&quot;Yellow, Red, Blue, White, and Black&quot;</span><span class="p">);</span>
+<span class="n">HRE</span> <span class="n">hre</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HRE</span><span class="p">(</span><span class="s">&quot;Holy Roman Empire&quot;</span><span class="p">,</span> <span class="mf">1.806</span><span class="p">,</span> <span class="s">&quot;Yellow and Black&quot;</span><span class="p">);</span>
+<span class="n">Sealand</span> <span class="n">sld</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Sealand</span><span class="p">(</span><span class="s">&quot;Sealand&quot;</span><span class="p">,</span> <span class="mi">90000</span><span class="p">,</span> <span class="s">&quot;Red, White, and Black&quot;</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">birthday</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">favoritecolor</span><span class="p">;</span>
+ 
+    <span class="kd">public</span> <span class="nf">Person</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">double</span> <span class="n">birthday</span><span class="p">,</span> <span class="n">String</span> <span class="n">favoritecolor</span><span class="p">){</span>
+       <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+       <span class="k">this</span><span class="p">.</span><span class="na">birthday</span> <span class="o">=</span> <span class="n">birthday</span><span class="p">;</span>
+       <span class="k">this</span><span class="p">.</span><span class="na">favoritecolor</span> <span class="o">=</span> <span class="n">favoritecolor</span><span class="p">;</span>
+    <span class="p">}</span>
+ 
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">(){</span>
+       <span class="k">return</span> <span class="n">name</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getBirthday</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">birthday</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getFavoriteColor</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">favoritecolor</span><span class="p">;</span>
+    <span class="p">}</span>
+ <span class="p">}</span>
+ 
+
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="kd">extends</span> <span class="n">Person</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">grade</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">gpa</span><span class="p">;</span>
+ 
+    <span class="kd">public</span> <span class="nf">Student</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">double</span> <span class="n">birthday</span><span class="p">,</span> <span class="n">String</span> <span class="n">favoritecolor</span><span class="p">,</span> <span class="kt">int</span> <span class="n">grade</span><span class="p">,</span> <span class="kt">double</span> <span class="n">gpa</span><span class="p">)</span> <span class="p">{</span>
+       <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">birthday</span><span class="p">,</span> <span class="n">favoritecolor</span><span class="p">);</span>
+       <span class="k">this</span><span class="p">.</span><span class="na">grade</span> <span class="o">=</span> <span class="n">grade</span><span class="p">;</span>
+       <span class="k">this</span><span class="p">.</span><span class="na">gpa</span> <span class="o">=</span> <span class="n">gpa</span><span class="p">;</span>
+    <span class="p">}</span>
+ 
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getGrade</span><span class="p">(){</span>
+       <span class="k">return</span> <span class="n">grade</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getGPA</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">gpa</span><span class="p">;</span>
+    <span class="p">}</span>
+ <span class="p">}</span>
+
+ <span class="n">Student</span> <span class="n">stink</span>  <span class="o">=</span> <span class="k">new</span> <span class="n">Student</span><span class="p">(</span><span class="s">&quot;Stink&quot;</span><span class="p">,</span> <span class="mf">2.29</span><span class="p">,</span> <span class="s">&quot;Brown&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mf">1.31</span><span class="p">);</span>
+ <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">stink</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+ <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">stink</span><span class="p">.</span><span class="na">getBirthday</span><span class="p">());</span>
+ <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">stink</span><span class="p">.</span><span class="na">getFavoriteColor</span><span class="p">());</span>
+ <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">stink</span><span class="p">.</span><span class="na">getGrade</span><span class="p">());</span>
+ <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">stink</span><span class="p">.</span><span class="na">getGPA</span><span class="p">());</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Stink
+2.29
+Brown
+12
+1.31
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="CalrethonOfMirkwood/csablog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/csablog/jupyter/2022/12/12/inheritencelesson.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/csablog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/csablog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/csablog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>I blog about stuff.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/CalrethonOfMirkwood" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/csablog/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
